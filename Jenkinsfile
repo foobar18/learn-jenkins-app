@@ -26,7 +26,9 @@ pipeline {
             steps {
                 sh '''
                     echo "Testing node app..."
-                    ls -la build
+                    test -f [ build/index.html ] && echo "File exists!"
+                    echo "Run npm test..."
+                    npm test
                 '''
             }
         }
