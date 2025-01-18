@@ -22,5 +22,13 @@ pipeline {
                 '''
             }
         }
+        stage('Test') {
+            steps {
+                sh '''
+                    echo "Testing node app..."
+                    ls -la build
+                '''
+            }
+        }
     }
 }
