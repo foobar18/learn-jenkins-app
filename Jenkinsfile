@@ -29,11 +29,11 @@ pipeline {
                     reuseNode true
                 }
             }
-            
+
             steps {
                 sh '''
                     echo "Testing node app..."
-                    test -f [ build/index.html ] && echo "File exists!"
+                    test -f build/index.html && echo "File exists!"
                     echo "Run npm test..."
                     npm test
                 '''
